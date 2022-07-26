@@ -23,3 +23,64 @@ def transforma_base(questoes):
        
     return dic
     
+    
+# Valida uma questão
+
+def valida_questao(questao):
+    temerro = False
+    if 'titulo' not in questao.keys():
+        questao['titulo'] = 'nao_encontrado'
+        temerro = True
+    elif 'nivel' not in questao.keys():
+        questao['nivel'] = 'nao_encontrado'
+        temerro = True
+    elif 'opcoes' not in questao.keys():
+        questao['opcoes'] = 'nao_encontrado'
+        temerro = True
+    elif 'correta' not in questao.keys():
+        questao['correta'] = 'nao_encontrado'
+        temerro = True
+    
+    if len(questao.keys()) != 4:
+        questao['outro'] = 'numero_chaves_invalido'
+        temerro = True
+
+    if 'titulo' in questao.values() == '':
+        questao['titulo'] = 'vazio'
+        temerro = True
+
+    if 'nivel' in questao.values() != 'facil' or 'medio' or 'dificil':
+        questao['nivel'] = 'valor_errado'
+        temerro = True
+
+    if len(questao['opcoes'].keys()) != 4:
+        questao['opcoes'] = 'tamanho_invalido'
+        temerro = True
+
+    if 'opcoes' in questao.values() != 'A' or 'B' or 'C' or 'D':
+        questao['opcoes'] = 'chave_invalida_ou_nao_encontrada'
+        temerro = True
+
+    else:
+        if 'A' in questao['opcoes'].values() == '':
+            questao['opcoes']['A'] = 'vazia'
+            temerro = True
+        if 'B' in questao['opcoes'].values() == '':
+            questao['opcoes']['B'] = 'vazia'
+            temerro = True
+        if 'C' in questao['opcoes'].values() == '':
+            questao['opcoes']['C'] = 'vazia'
+            temerro = True
+        if 'D' in questao['opcoes'].values() == '':
+            questao['opcoes']['D'] = 'vazia'
+            temerro = True
+        
+    if 'correta' in questao.values() != 'A' or 'B' or 'C' or 'D':
+        questao['correta'] = 'valor_errado'
+        temerro = True
+    
+    if temerro == False:
+        return {}
+
+    else:
+        return questao
