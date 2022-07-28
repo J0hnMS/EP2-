@@ -94,3 +94,9 @@ def sorteia_questao(dic, nivel):
     return sorteio
     
     
+#Sorteia uma questão inédita
+import random
+def sorteia_questao_inedida(dic, nivel, lista):
+    sorteio = random.choice(dic[nivel])
+    lista.append(sorteio)
+    return sorteio
