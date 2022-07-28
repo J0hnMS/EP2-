@@ -86,3 +86,11 @@ def valida_questao(questao):
         erros['correta'] = 'valor_errado'
     
     return erros
+    
+#Sorteia uma questão
+import random
+def sorteia_questao(dic, nivel):
+    sorteio = random.choice(dic[nivel])
+    return sorteio
+    
+    
