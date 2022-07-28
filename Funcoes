@@ -32,6 +32,18 @@ def valida_questao(questao):
     if len(questao.keys()) != 4:
         erros['outro'] = 'numero_chaves_invalido'
         temerro = True
+        
+# Questao para texto
+def questao_para_texto(questao, ID):
+    f = ''
+    b = '----------------------------------------\n'
+    c = 'QUESTAO ' + str(ID) + '\n\n'
+    d = questao['titulo'] +  '\n\n'
+    e = 'RESPOSTAS:\n'
+    for letra, texto in questao['opcoes'].items():
+        f +=  (f'{letra}: {texto}' '\n')
+    st =  b + c + d + e + f 
+    return st
 
     # titulo
     if 'titulo' not in questao.keys():
