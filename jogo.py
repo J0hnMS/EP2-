@@ -21,7 +21,7 @@ while continuar = True:
 
 
     sorteio = random.choice(dic['nivel'])
-    print (sorteio)
+    #print (sorteio)
 
     f = ''
     b = '----------------------------------------\n'
