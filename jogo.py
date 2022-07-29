@@ -5,7 +5,7 @@ import random
 dic = dicionario()
 
 continuar = True
-while continuar:
+while continuar = True:
 
     nome = input('Digite seu nome:')
     print(f'Ok {nome}, você tem direito a pular 3 vezes e 2 ajudas!\n As opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!')
