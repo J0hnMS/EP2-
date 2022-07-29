@@ -38,9 +38,9 @@ while continuar = True:
     if resposta != dic['opcoes','letras'] or resposta != 'pula' or resposta != 'ajuda':
         print ('opção inexistente')        
 
-    if resposta == 'pula' and pulos < 0:
+    if resposta == 'pula' and pulos > 0:
         pulos -= 1
-    elif resposta == 'ajuda' and ajudas < 0:
+    elif resposta == 'ajuda' and ajudas > 0:
         # gera ajuda em questao
         ajudas -= 1
     elif resposta == dic['correta']:
