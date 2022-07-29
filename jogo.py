@@ -1,4 +1,4 @@
-from sympy import NotInvertible, prem
+from sympy import NotInvertible
 from Base_de_Perguntas import dicionario
 import random
 
