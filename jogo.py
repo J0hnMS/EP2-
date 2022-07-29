@@ -29,4 +29,4 @@ elif resposta == 'dica':
     # gera ajuda em questao
     dica -= 1
 elif resposta == dic['correta']:
-    print('')
+    print('Você acertou! ')
