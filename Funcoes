@@ -33,18 +33,6 @@ def valida_questao(questao):
         erros['outro'] = 'numero_chaves_invalido'
         temerro = True
         
-# Questao para texto
-def questao_para_texto(questao, ID):
-    f = ''
-    b = '----------------------------------------\n'
-    c = 'QUESTAO ' + str(ID) + '\n\n'
-    d = questao['titulo'] +  '\n\n'
-    e = 'RESPOSTAS:\n'
-    for letra, texto in questao['opcoes'].items():
-        f +=  (f'{letra}: {texto}' '\n')
-    st =  b + c + d + e + f 
-    return st
-
     # titulo
     if 'titulo' not in questao.keys():
         erros['titulo'] = 'nao_encontrado'
@@ -99,6 +87,22 @@ def questao_para_texto(questao, ID):
     
     return erros
     
+    
+    
+# Questao para texto
+def questao_para_texto(questao, ID):
+    f = ''
+    b = '----------------------------------------\n'
+    c = 'QUESTAO ' + str(ID) + '\n\n'
+    d = questao['titulo'] +  '\n\n'
+    e = 'RESPOSTAS:\n'
+    for letra, texto in questao['opcoes'].items():
+        f +=  (f'{letra}: {texto}' '\n')
+    st =  b + c + d + e + f 
+    return st
+
+
+
 #Sorteia uma questão
 import random
 def sorteia_questao(dic, nivel):
