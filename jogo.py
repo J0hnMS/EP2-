@@ -68,13 +68,13 @@ while continuar = True:
         Continuar = input('Você perdeu! Deseja parar ou continuar? ')
         if Continuar == 'parar':
             continuar = False
-            print ('Você recebeu o premio de {PREMIO}'.format(PREMIO))
+            print ('Você recebeu o premio de {0}'.format(PREMIO))
         elif Continuar == 'continuar':
             PREMIO = 0
             continuar = True
 
     if PREMIO == 1000000:
-        print ('Você recebeu o premio de {PREMIO}'.format(PREMIO))
+        print ('Você recebeu o premio de {0}'.format(PREMIO))
 
 
 
