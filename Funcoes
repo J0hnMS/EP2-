@@ -89,6 +89,17 @@ def valida_questao(questao):
     
     
     
+#Valida lista de questões
+def valida_questoes(lista):
+    lista_erro = []
+    for x in lista:
+        valida = valida_questao(x)
+        lista_erro.append(valida)
+    return lista_erro
+
+    
+    
+    
 # Questao para texto
 def questao_para_texto(questao, ID):
     f = ''
