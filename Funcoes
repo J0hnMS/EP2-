@@ -116,3 +116,19 @@ def sorteia_questao_inedida(dic, nivel, lista):
     sorteio = random.choice(dic[nivel])
     lista.append(sorteio)
     return sorteio
+    
+    
+#Gera ajuda em questões
+import random
+def gera_ajuda(questao): 
+    lista = []
+    for x, i in questao['opcoes'].items():
+        if x != questao['correta']:
+            lista.append(i)
+
+    sorte = random.randint(1,2)
+    dica = random.sample(lista, k=sorte) 
+
+    a = 'DICA:\n'
+    a += 'Opções certamente erradas: ' + ' | '.join(dica)   
+    return a
