@@ -19,9 +19,9 @@ while continuar == True:
 
     jogos = 0
     
-    if jogos <= 4:
+    if jogos < 4:
         nivel = 'facil'
-    elif jogos > 4 <= 7:
+    elif jogos < 7:
         nivel = 'medio'
     else:
         nivel = 'dificil'
