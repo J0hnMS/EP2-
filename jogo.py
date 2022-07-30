@@ -17,8 +17,20 @@ while continuar == True:
 
     premios = 0
 
+    jogos = 0
     
-    sorteio = random.choice(dic['nivel'])
+    if jogos <= 4:
+        nivel = 'facil'
+    elif jogos > 4 <= 7:
+        nivel = 'medio'
+    else:
+        nivel = 'dificil'
+
+    def sorteia_questao(dic, nivel):
+        sorteio = random.choice(dic[nivel])
+    
+    print(sorteia_questao(dic[nivel]))
+    
     #print (sorteio)
 
     f = ''
@@ -32,7 +44,7 @@ while continuar == True:
     print (st)
 
     resposta = input('Digite sua resposta')
-
+    jogos += 1
     if resposta != dic['opcoes','letras'] or resposta != 'pula' or resposta != 'ajuda':
         print ('opção inexistente')        
 
